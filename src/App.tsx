@@ -14,7 +14,8 @@ const featuredTools = [
     price: "free",
     rating: 4.8,
     imageUrl: "https://texttocontentdotai.vercel.app",
-    category: "ai"
+    category: "ai",
+    thumbnailUrl: "https://images.unsplash.com/photo-1677442135076-9e6718633eb7?q=80&w=500&auto=format&fit=crop"
   },
   {
     id: 2,
@@ -23,7 +24,8 @@ const featuredTools = [
     price: "free",
     rating: 4.7,
     imageUrl: "https://query-smith.streamlit.app/",
-    category: "dev"
+    category: "dev",
+    thumbnailUrl: "https://images.unsplash.com/photo-1607798748738-b15c40d33d57?q=80&w=500&auto=format&fit=crop"
   },
   {
     id: 3,
@@ -32,7 +34,8 @@ const featuredTools = [
     price: "free",
     rating: 4.9,
     imageUrl: "emailsmith.vercel.app",
-    category: "productivity"
+    category: "productivity",
+    thumbnailUrl: "https://images.unsplash.com/photo-1677442135076-9e6718633eb7?q=80&w=500&auto=format&fit=crop"
   },
   {
     id: 4,
@@ -41,7 +44,8 @@ const featuredTools = [
     price: "free",
     rating: 4.6,
     imageUrl: "https://unix-bot.streamlit.app/",
-    category: "dev"
+    category: "dev",
+    thumbnailUrl: "https://images.unsplash.com/photo-1677442135076-9e6718633eb7?q=80&w=500&auto=format&fit=crop"
   },
   {
     id: 5,
@@ -49,8 +53,9 @@ const featuredTools = [
     description: "AI powered search engine",
     price: "free",
     rating: 4.5,
-    imageUrl:"https://websearchai.streamlit.app/" ,
-    category: "dev"
+    imageUrl: "https://websearchai.streamlit.app/",
+    category: "dev",
+    thumbnailUrl: "https://images.unsplash.com/photo-1677442135076-9e6718633eb7?q=80&w=500&auto=format&fit=crop"
   },
   {
     id: 6,
@@ -59,15 +64,19 @@ const featuredTools = [
     price: "free",
     rating: 4.5,
     imageUrl: "https://intellisketch.streamlit.app/",
-    category: "ai"},
-    {
+    category: "ai",
+    thumbnailUrl: "https://images.unsplash.com/photo-1677442135076-9e6718633eb7?q=80&w=500&auto=format&fit=crop"
+  },
+  {
     id: 7,
     title: "Chat to any PDF using AI",
     description: "AI powered chat",
     price: "free",
     rating: 4.5,
     imageUrl: "https://chat2pdf-using-gemini.streamlit.app/",
-    category: "productivity"}
+    category: "productivity",
+    thumbnailUrl: "https://storage.googleapis.com/s4a-prod-share-preview/default/st_app_screenshot_image/f3b3e2e9-49f2-40f8-b409-e77a4614e8d3/Home_Page.png"
+  }
 ];
 
 const blogPosts = [
@@ -123,8 +132,13 @@ function App() {
   }, [searchQuery, selectedCategory]);
 
   const handleToolClick = (toolId: number) => {
-    // In a real app, this would navigate to the tool's detail page
-    console.log(`Viewing tool ${toolId}`);
+    // Find the tool with the matching ID
+    const tool = featuredTools.find(t => t.id === toolId);
+
+    // If the tool exists and has a URL, open it in a new tab
+    if (tool && tool.imageUrl) {
+      window.open(tool.imageUrl, '_blank', 'noopener,noreferrer');
+    }
   };
 
   const handleBlogClick = (blogId: number) => {
@@ -181,6 +195,7 @@ function App() {
                 key={tool.id}
                 {...tool}
                 onClick={() => handleToolClick(tool.id)}
+                thumbnailUrl={tool.thumbnailUrl}
               />
             ))}
           </div>
