@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --mono-black: #000000;
+  --mono-gray-dark: #222222;
+  --mono-gray: #555555;
+  --mono-gray-light: #999999;
+  --mono-white: #ffffff;
+  --pixel-border-size: 2px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, 
+    var(--mono-white) 0%, 
+    var(--mono-white) 45%, 
+    var(--mono-gray-light) 50%, 
+    var(--mono-white) 55%, 
+    var(--mono-white) 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+body {
+  margin: 0;
+  background-color: var(--mono-black);
+  background-image: 
+    linear-gradient(rgba(40, 40, 40, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(40, 40, 40, 0.2) 1px, transparent 1px);
+  background-size: 20px 20px;
+  image-rendering: pixelated;
+  font-family: 'Press Start 2P', system-ui, monospace;
+}
+
+.atari-container {
+  color: var(--mono-white);
+  text-shadow: none;
+}
+
+.atari-header {
+  background-color: var(--mono-black) !important;
+  border-bottom: var(--pixel-border-size) solid var(--mono-white) !important;
+}
+
+.atari-logo {
+  color: var(--mono-white) !important;
+  filter: none;
+}
+
+.atari-hero {
+  background-color: var(--mono-black) !important;
+  border-bottom: var(--pixel-border-size) solid var(--mono-white) !important;
+}
+
+.atari-title {
+  color: var(--mono-white) !important;
+  text-shadow: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2rem !important;
+}
+
+.atari-subtitle {
+  color: var(--mono-gray-light) !important;
+  text-shadow: none;
+}
+
+.atari-search {
+  background-color: var(--mono-black) !important;
+  border: var(--pixel-border-size) solid var(--mono-white) !important;
+  color: var(--mono-white) !important;
+  font-family: 'Press Start 2P', monospace !important;
+}
+
+.atari-search::placeholder {
+  color: var(--mono-gray) !important;
+}
+
+.atari-search:focus {
+  border-color: var(--mono-white) !important;
+  box-shadow: none !important;
+}
+
+.atari-category-button {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 0.6rem !important;
+  border: var(--pixel-border-size) solid !important;
+  transition: all 0.2s ease !important;
+}
+
+.atari-category-selected {
+  background-color: var(--mono-white) !important;
+  border-color: var(--mono-white) !important;
+  color: var(--mono-black) !important;
+  position: relative;
+}
+
+.atari-category-unselected {
+  background-color: var(--mono-black) !important;
+  border-color: var(--mono-white) !important;
+  color: var(--mono-white) !important;
+}
+
+.atari-category-unselected:hover {
+  border-color: var(--mono-white) !important;
+  color: var(--mono-white) !important;
+  background-color: var(--mono-gray-dark) !important;
+}
+
+.atari-card {
+  background-color: var(--mono-black) !important;
+  border: var(--pixel-border-size) solid var(--mono-white) !important;
+  overflow: visible !important;
+  image-rendering: pixelated;
+  position: relative;
+}
+
+.atari-card:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: none;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.atari-card:hover {
+  transform: translateY(-4px);
+  background-color: var(--mono-gray-dark) !important;
+}
+
+.atari-card-title {
+  color: var(--mono-white) !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.atari-card-description {
+  color: var(--mono-gray-light) !important;
+  font-size: 0.6rem !important;
+  line-height: 1.5 !important;
+}
+
+.atari-price {
+  color: var(--mono-white) !important;
+  font-size: 0.8rem !important;
+}
+
+.atari-button {
+  background-color: var(--mono-black) !important;
+  color: var(--mono-white) !important;
+  border: var(--pixel-border-size) solid var(--mono-white) !important;
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 0.6rem !important;
+  position: relative;
+  transition: all 0.1s ease !important;
+}
+
+.atari-button:hover {
+  transform: translateY(0);
+  background-color: var(--mono-white) !important;
+  color: var(--mono-black) !important;
+}
+
+.atari-button:active {
+  transform: translateY(2px);
+}
+
+.atari-rating {
+  background-color: var(--mono-black) !important;
+  border: var(--pixel-border-size) solid var(--mono-white) !important;
+  color: var(--mono-white) !important;
+} 
