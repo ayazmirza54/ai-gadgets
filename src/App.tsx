@@ -9,40 +9,65 @@ import './atariTheme.css';
 const featuredTools = [
   {
     id: 1,
-    title: "AI Writer Pro",
-    description: "Advanced AI writing assistant with context awareness and style matching capabilities.",
-    price: 49.99,
+    title: "Text to Content AI",
+    description: "One stop shop for content creation using AI.",
+    price: "free",
     rating: 4.8,
-    imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80",
+    imageUrl: "https://texttocontentdotai.vercel.app",
     category: "ai"
   },
   {
     id: 2,
-    title: "PixelMind",
-    description: "Generate pixel-perfect art and animations using advanced AI algorithms.",
-    price: 39.99,
+    title: "QuerySmith AI",
+    description: "Generate SQL queries using AI",
+    price: "free",
     rating: 4.7,
-    imageUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80",
-    category: "image"
+    imageUrl: "https://query-smith.streamlit.app/",
+    category: "dev"
   },
   {
     id: 3,
-    title: "CodeBot X",
-    description: "AI-powered code completion and refactoring tool for developers.",
-    price: 59.99,
+    title: "Email Smith AI",
+    description: "AI-powered Email generation tool",
+    price: "free",
     rating: 4.9,
-    imageUrl: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80",
-    category: "code"
+    imageUrl: "emailsmith.vercel.app",
+    category: "productivity"
   },
   {
     id: 4,
-    title: "VoiceForge",
-    description: "Transform text into natural speech with multiple AI voices and accents.",
-    price: 29.99,
+    title: "Unix Bot AI",
+    description: "Transform text into specific unix commands",
+    price: "free",
     rating: 4.6,
-    imageUrl: "https://images.unsplash.com/photo-1519558260268-cde7e03a0152?auto=format&fit=crop&q=80",
-    category: "ai"
-  }
+    imageUrl: "https://unix-bot.streamlit.app/",
+    category: "dev"
+  },
+  {
+    id: 5,
+    title: "WebSearch AI",
+    description: "AI powered search engine",
+    price: "free",
+    rating: 4.5,
+    imageUrl:"https://websearchai.streamlit.app/" ,
+    category: "dev"
+  },
+  {
+    id: 6,
+    title: "IntelliSketch AI",
+    description: "AI powered drawing tool",
+    price: "free",
+    rating: 4.5,
+    imageUrl: "https://intellisketch.streamlit.app/",
+    category: "ai"},
+    {
+    id: 7,
+    title: "Chat to any PDF using AI",
+    description: "AI powered chat",
+    price: "free",
+    rating: 4.5,
+    imageUrl: "https://chat2pdf-using-gemini.streamlit.app/",
+    category: "productivity"}
 ];
 
 const blogPosts = [
