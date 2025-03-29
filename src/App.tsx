@@ -86,8 +86,8 @@ const blogPosts = [
     subtitle: "IntelliSketch: Building an AI-Powered Mathematical Sketching App",
     date: "Oct 12, 2024",
     readTime: "5 min",
-    source: "Dev.to",
-    icon: <Pencil size={48} className="w-7 h-7 md:w-5 md:h-5" />
+    source: "https://dev.to/ayazmirza54/intellisketch-ai-powered-drawing-tool-3i8e",
+    icon: <Pencil className="w-8 h-8 md:w-6 md:h-6" />
   },
   {
     id: 2,
@@ -95,8 +95,8 @@ const blogPosts = [
     subtitle: "Migrating my app from chatgpt API to Gemini AI API",
     date: "Sept 14, 2024",
     readTime: "4 min",
-    source: "Dev.to",
-    icon: <GitBranch size={48} className="w-7 h-7 md:w-5 md:h-5" />
+    source: "https://dev.to/ayazmirza54/migrating-my-app-from-chatgpt-api-to-gemini-ai-api-557o",
+    icon: <GitBranch className="w-8 h-8 md:w-6 md:h-6" />
   },
   {
     id: 3,
@@ -104,8 +104,8 @@ const blogPosts = [
     subtitle: "Using babyAGI and AutoGPT to interact with chatGPT on loop",
     date: "Apr 13, 2023",
     readTime: "6 min",
-    source: "Dev.to",
-    icon: <Bot size={48} className="w-7 h-7 md:w-5 md:h-5" />
+    source: "https://dev.to/ayazmirza54/chatgpt-on-loop-using-babyagi-and-autogpt-29c8",
+    icon: <Bot className="w-8 h-8 md:w-6 md:h-6" />
   },
   {
     id: 4,
@@ -113,8 +113,8 @@ const blogPosts = [
     subtitle: "Building a Text and Code Utilities App using OpenAI API",
     date: "Jan 28, 2023",
     readTime: "7 min",
-    source: "Dev.to",
-    icon: <Code size={48} className="w-7 h-7 md:w-5 md:h-5" />
+    source: "https://dev.to/ayazmirza54/text-and-code-utilities-app-using-openai-api-4m13",
+    icon: <Code className="w-8 h-8 md:w-6 md:h-6" />
   }
 ];
 
@@ -142,8 +142,13 @@ function App() {
   };
 
   const handleBlogClick = (blogId: number) => {
-    // In a real app, this would navigate to the blog post
-    console.log(`Reading blog ${blogId}`);
+    // Find the blog with the matching ID
+    const blog = blogPosts.find(b => b.id === blogId);
+
+    // If the blog exists and has a URL, open it in a new tab
+    if (blog && blog.source) {
+      window.open(blog.source, '_blank', 'noopener,noreferrer');
+    }
   };
 
   return (
@@ -153,7 +158,7 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Cpu size={48} className="w-10 h-10 md:w-8 md:h-8 atari-logo" />
+              <Cpu className="w-12 h-12 md:w-10 md:h-10 atari-logo" />
               <h1 className="text font-bold shimmer-text">
                 AI Gadgets.show - an AI tools marketplace
               </h1>
