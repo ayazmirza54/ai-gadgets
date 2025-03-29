@@ -5,7 +5,7 @@ import { CategoryFilter } from './components/CategoryFilter';
 import { ToolCard } from './components/ToolCard';
 import { BlogCard } from './components/BlogCard';
 import './atariTheme.css';
-
+import { Analytics } from "@vercel/analytics/react"
 const featuredTools = [
   {
     id: 1,
@@ -220,6 +220,7 @@ function App() {
           </div>
         </div>
       </main>
+      <Analytics />
     </div>
   );
 }
