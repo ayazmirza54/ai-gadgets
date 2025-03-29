@@ -33,7 +33,7 @@ const featuredTools = [
     description: "AI-powered Email generation tool",
     price: "free",
     rating: 4.9,
-    imageUrl: "emailsmith.vercel.app",
+    imageUrl: "https://emailsmith.vercel.app",
     category: "productivity",
     thumbnailUrl: "https://opengraph.b-cdn.net/production/images/75ed6f61-b142-4690-9c13-1961cfa28c01.png?token=2a0spdMuDL6smlo0jCBjPyeH_ru0E4j4t5MBC2BaaCc&height=900&width=1200&expires=33278379118"
   },
