@@ -15,7 +15,7 @@ const featuredTools = [
     rating: 4.8,
     imageUrl: "https://texttocontentdotai.vercel.app",
     category: "ai",
-    thumbnailUrl: "https://images.unsplash.com/photo-1677442135076-9e6718633eb7?q=80&w=500&auto=format&fit=crop"
+    thumbnailUrl: "https://opengraph.b-cdn.net/production/images/d2191f8c-f07c-494b-854b-281f67c52b6e.png?token=QK8jkkzV7j7xvYLQdz4UvUYMfRqlyDzGNER8TCVsP8c&height=1013&width=1200&expires=33271056025"
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const featuredTools = [
     rating: 4.7,
     imageUrl: "https://query-smith.streamlit.app/",
     category: "dev",
-    thumbnailUrl: "https://images.unsplash.com/photo-1607798748738-b15c40d33d57?q=80&w=500&auto=format&fit=crop"
+    thumbnailUrl: "https://storage.googleapis.com/s4a-prod-share-preview/default/st_app_screenshot_image/a1f682d0-a02d-4a4b-8c7f-676d398a776d/Home_Page.png"
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const featuredTools = [
     rating: 4.9,
     imageUrl: "emailsmith.vercel.app",
     category: "productivity",
-    thumbnailUrl: "https://images.unsplash.com/photo-1677442135076-9e6718633eb7?q=80&w=500&auto=format&fit=crop"
+    thumbnailUrl: "https://opengraph.b-cdn.net/production/images/75ed6f61-b142-4690-9c13-1961cfa28c01.png?token=2a0spdMuDL6smlo0jCBjPyeH_ru0E4j4t5MBC2BaaCc&height=900&width=1200&expires=33278379118"
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ const featuredTools = [
     rating: 4.6,
     imageUrl: "https://unix-bot.streamlit.app/",
     category: "dev",
-    thumbnailUrl: "https://images.unsplash.com/photo-1677442135076-9e6718633eb7?q=80&w=500&auto=format&fit=crop"
+    thumbnailUrl: "https://storage.googleapis.com/s4a-prod-share-preview/default/st_app_screenshot_image/68318dd4-b170-4e16-bde3-ac68ffcb091a/Home_Page.png"
   },
   {
     id: 5,
@@ -55,7 +55,7 @@ const featuredTools = [
     rating: 4.5,
     imageUrl: "https://websearchai.streamlit.app/",
     category: "dev",
-    thumbnailUrl: "https://images.unsplash.com/photo-1677442135076-9e6718633eb7?q=80&w=500&auto=format&fit=crop"
+    thumbnailUrl: "https://storage.googleapis.com/s4a-prod-share-preview/default/st_app_screenshot_image/afbcdf23-6162-4ae8-9056-48820f73395d/Home_Page.png"
   },
   {
     id: 6,
@@ -63,9 +63,9 @@ const featuredTools = [
     description: "AI powered drawing tool",
     price: "free",
     rating: 4.5,
-    imageUrl: "https://intellisketch.streamlit.app/",
+    imageUrl: "https://intellisketch.vercel.app/",
     category: "ai",
-    thumbnailUrl: "https://images.unsplash.com/photo-1677442135076-9e6718633eb7?q=80&w=500&auto=format&fit=crop"
+    thumbnailUrl: "https://opengraph.b-cdn.net/production/images/bfe7cda6-e841-44c6-8051-50ddc1337c22.png?token=TLmuYhH4eGMunQZnkRk-3cc1ix8qSsgwURDJjzgwtFA&height=513&width=1200&expires=33279220158"
   },
   {
     id: 7,
