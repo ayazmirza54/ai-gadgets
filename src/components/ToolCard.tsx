@@ -36,7 +36,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({
       </div>
 
       <div className="p-6">
-        <h3 className="text-lg font-semibold mb-2 text-white">{title}</h3>
+        <h3 className="text font-semibold mb-2 text-white">{title}</h3>
         <p className="text-gray-400 mb-4">{description}</p>
 
         <div className="flex items-center justify-between">
