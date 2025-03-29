@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Image, MessageSquare, Code, Wand2 } from 'lucide-react';
+import { Brain, Image, MessageSquare, Code, Wand2, WorkflowIcon } from 'lucide-react';
 
 interface CategoryFilterProps {
   selectedCategory: string;
@@ -10,8 +10,8 @@ const categories = [
   { id: 'all', label: 'ALL TOOLS', icon: Wand2 },
   { id: 'ai', label: 'AI/ML', icon: Brain },
   { id: 'image', label: 'IMAGE', icon: Image },
-  { id: 'chat', label: 'CHAT', icon: MessageSquare },
-  { id: 'code', label: 'CODE', icon: Code },
+  { id: 'dev', label: 'DEV', icon: Code },
+  { id: 'productivity', label: 'PRODUCTIVITY', icon: WorkflowIcon },
 ];
 
 export function CategoryFilter({ selectedCategory, onCategoryChange }: CategoryFilterProps) {

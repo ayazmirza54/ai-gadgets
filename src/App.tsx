@@ -14,7 +14,7 @@ const featuredTools = [
     price: "free",
     rating: 4.8,
     imageUrl: "https://texttocontentdotai.vercel.app",
-    category: "ai",
+    category: "image",
     thumbnailUrl: "https://opengraph.b-cdn.net/production/images/d2191f8c-f07c-494b-854b-281f67c52b6e.png?token=QK8jkkzV7j7xvYLQdz4UvUYMfRqlyDzGNER8TCVsP8c&height=1013&width=1200&expires=33271056025"
   },
   {
@@ -87,7 +87,7 @@ const blogPosts = [
     date: "Oct 12, 2024",
     readTime: "5 min",
     source: "https://dev.to/ayazmirza54/intellisketch-ai-powered-drawing-tool-3i8e",
-    icon: <Pencil className="w-8 h-8 md:w-6 md:h-6" />
+
   },
   {
     id: 2,
@@ -96,7 +96,7 @@ const blogPosts = [
     date: "Sept 14, 2024",
     readTime: "4 min",
     source: "https://dev.to/ayazmirza54/migrating-my-app-from-chatgpt-api-to-gemini-ai-api-557o",
-    icon: <GitBranch className="w-8 h-8 md:w-6 md:h-6" />
+
   },
   {
     id: 3,
@@ -105,7 +105,7 @@ const blogPosts = [
     date: "Apr 13, 2023",
     readTime: "6 min",
     source: "https://dev.to/ayazmirza54/chatgpt-on-loop-using-babyagi-and-autogpt-29c8",
-    icon: <Bot className="w-8 h-8 md:w-6 md:h-6" />
+    
   },
   {
     id: 4,
@@ -114,7 +114,7 @@ const blogPosts = [
     date: "Jan 28, 2023",
     readTime: "7 min",
     source: "https://dev.to/ayazmirza54/text-and-code-utilities-app-using-openai-api-4m13",
-    icon: <Code className="w-8 h-8 md:w-6 md:h-6" />
+   
   }
 ];
 
@@ -218,7 +218,6 @@ function App() {
                 date={blog.date}
                 readTime={blog.readTime}
                 source={blog.source}
-                icon={blog.icon}
                 onClick={() => handleBlogClick(blog.id)}
               />
             ))}
