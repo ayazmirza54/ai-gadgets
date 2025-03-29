@@ -87,7 +87,7 @@ const blogPosts = [
     date: "Oct 12, 2024",
     readTime: "5 min",
     source: "Dev.to",
-    icon: <Pencil className="w-5 h-5" />
+    icon: <Pencil size={48} className="w-5 h-5" />
   },
   {
     id: 2,
@@ -96,7 +96,7 @@ const blogPosts = [
     date: "Sept 14, 2024",
     readTime: "4 min",
     source: "Dev.to",
-    icon: <GitBranch className="w-5 h-5" />
+    icon: <GitBranch size={48} className="w-5 h-5" />
   },
   {
     id: 3,
@@ -105,7 +105,7 @@ const blogPosts = [
     date: "Apr 13, 2023",
     readTime: "6 min",
     source: "Dev.to",
-    icon: <Bot className="w-5 h-5" />
+    icon: <Bot size={48} className="w-5 h-5" />
   },
   {
     id: 4,
@@ -114,7 +114,7 @@ const blogPosts = [
     date: "Jan 28, 2023",
     readTime: "7 min",
     source: "Dev.to",
-    icon: <Code className="w-5 h-5" />
+    icon: <Code size={48} className="w-5 h-5" />
   }
 ];
 
