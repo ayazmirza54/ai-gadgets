@@ -87,7 +87,7 @@ const blogPosts = [
     date: "Oct 12, 2024",
     readTime: "5 min",
     source: "Dev.to",
-    icon: <Pencil size={48} className="w-5 h-5" />
+    icon: <Pencil size={48} className="w-7 h-7 md:w-5 md:h-5" />
   },
   {
     id: 2,
@@ -96,7 +96,7 @@ const blogPosts = [
     date: "Sept 14, 2024",
     readTime: "4 min",
     source: "Dev.to",
-    icon: <GitBranch size={48} className="w-5 h-5" />
+    icon: <GitBranch size={48} className="w-7 h-7 md:w-5 md:h-5" />
   },
   {
     id: 3,
@@ -105,7 +105,7 @@ const blogPosts = [
     date: "Apr 13, 2023",
     readTime: "6 min",
     source: "Dev.to",
-    icon: <Bot size={48} className="w-5 h-5" />
+    icon: <Bot size={48} className="w-7 h-7 md:w-5 md:h-5" />
   },
   {
     id: 4,
@@ -114,7 +114,7 @@ const blogPosts = [
     date: "Jan 28, 2023",
     readTime: "7 min",
     source: "Dev.to",
-    icon: <Code size={48} className="w-5 h-5" />
+    icon: <Code size={48} className="w-7 h-7 md:w-5 md:h-5" />
   }
 ];
 
@@ -153,7 +153,7 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Cpu size={48} className="w-8 h-8 atari-logo" />
+              <Cpu size={48} className="w-10 h-10 md:w-8 md:h-8 atari-logo" />
               <h1 className="text font-bold shimmer-text">
                 AI Gadgets.show - an AI tools marketplace
               </h1>
