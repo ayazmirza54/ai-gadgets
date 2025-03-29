@@ -153,7 +153,7 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Cpu className="w-8 h-8 atari-logo" />
+              <Cpu size={48} className="w-8 h-8 atari-logo" />
               <h1 className="text font-bold shimmer-text">
                 AI Gadgets.show - an AI tools marketplace
               </h1>
