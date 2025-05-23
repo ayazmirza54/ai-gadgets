@@ -81,7 +81,7 @@ const featuredTools = [
 ];
 
 const blogPosts = [
-  {
+  
     {
     id: 1,
     title: "Text-to-Context.ai : AI tools to transform ideas to content",
@@ -136,7 +136,7 @@ const blogPosts = [
     source: "https://dev.to/ayazmirza54/are-llms-just-etl-pipelines-on-steroids-rethinking-ai-training-1i0c",
    
   }
-  
+
 ];
 
 function App() {
