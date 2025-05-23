@@ -238,7 +238,7 @@ function App() {
                 subtitle={blog.subtitle}
                 date={blog.date}
                 readTime={blog.readTime}
-                source={blog.source}
+              //  source={blog.source}
                 onClick={() => handleBlogClick(blog.id)}
               />
             ))}
