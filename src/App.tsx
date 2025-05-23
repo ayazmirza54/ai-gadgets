@@ -82,7 +82,17 @@ const featuredTools = [
 
 const blogPosts = [
   {
+    {
     id: 1,
+    title: "Text-to-Context.ai : AI tools to transform ideas to content",
+    subtitle: "Text-to-Content AI is an all-in-one AI content generation platform that transforms ideas into polished content.",
+    date: "Jan 14, 2025",
+    readTime: "7 min",
+    source: "https://dev.to/ayazmirza54/text-to-contextai-ai-tools-to-transform-ideas-to-content-5g38",
+   
+  },
+  {
+    id: 2,
     title: "Intellisketch : AI powered drawing tool",
     subtitle: "IntelliSketch: Building an AI-Powered Mathematical Sketching App",
     date: "Oct 12, 2024",
@@ -91,7 +101,7 @@ const blogPosts = [
 
   },
   {
-    id: 2,
+    id: 3,
     title: "Migrating my app from chatgpt API to Gemini AI API",
     subtitle: "Migrating my app from chatgpt API to Gemini AI API",
     date: "Sept 14, 2024",
@@ -100,7 +110,7 @@ const blogPosts = [
 
   },
   {
-    id: 3,
+    id: 4,
     title: "ChatGPT on loop using babyAGI and AutoGPT",
     subtitle: "Using babyAGI and AutoGPT to interact with chatGPT on loop",
     date: "Apr 13, 2023",
@@ -109,14 +119,24 @@ const blogPosts = [
     
   },
   {
-    id: 4,
+    id: 5,
     title: "Text and Code Utilities App using OpenAI API",
     subtitle: "Building a Text and Code Utilities App using OpenAI API",
     date: "Jan 28, 2023",
     readTime: "7 min",
     source: "https://dev.to/ayazmirza54/text-and-code-utilities-app-using-openai-api-4m13",
    
+  },
+   {
+    id: 6,
+    title: "Are LLMs Just ETL Pipelines on Steroids? Rethinking AI Training",
+    subtitle: "We talk a lot about Large Language Models (LLMs) like GPT, Claude, and Llama – their incredible generative capabilities, their potential, and their complexities. But have you ever stopped to think about the process that gets them there? Strip away the most advanced layers, and the initial training phase starts to look surprisingly familiar to something many of us work with daily: ETL (Extract, Transform, Load).",
+    date: "Apr 15, 2025",
+    readTime: "7 min",
+    source: "https://dev.to/ayazmirza54/are-llms-just-etl-pipelines-on-steroids-rethinking-ai-training-1i0c",
+   
   }
+  
 ];
 
 function App() {
