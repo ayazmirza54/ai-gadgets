@@ -54,8 +54,7 @@ body {
 }
 
 .atari-logo {
-  color: var(--mono-white) !important;
-  filter: none;
+  filter: invert();
 }
 
 .atari-hero {

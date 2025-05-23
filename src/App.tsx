@@ -6,7 +6,7 @@ import { ToolCard } from './components/ToolCard';
 import { BlogCard } from './components/BlogCard';
 import './atariTheme.css';
 import { Analytics } from "@vercel/analytics/react"
-import { Logo } from './logo.png'
+import logo from './assets/logo.png'
 const featuredTools = [
   {
     id: 1,
@@ -159,7 +159,7 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Logo className="w-12 h-12 md:w-10 md:h-10 atari-logo" />
+              <img src={logo} className="w-12 h-12 md:w-10 md:h-10 atari-logo" />
               <h1 className="text font-bold shimmer-text">
                 AI Gadgets.show - an AI tools marketplace
               </h1>
