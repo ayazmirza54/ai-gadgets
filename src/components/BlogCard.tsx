@@ -21,7 +21,7 @@ export function BlogCard({ title, subtitle, date, readTime, source, icon, onClic
                 <div className="space-y-3 w-full overflow-hidden">
                     <div className="flex items-center space-x-2 w-full overflow-hidden">
                         {icon}
-                        <h3 className="text-xs overflow-hidden text-ellipsis whitespace-wrap font-bold uppercase shimmer-text max-w-full">{title}</h3>
+                        <h3 className="text-xs overflow-hidden text-ellipsis whitespace-normal font-bold uppercase shimmer-text max-w-full">{title}</h3>
                     </div>
                     <p className="text-xs text-gray-400">{subtitle}</p>
                     <div className="text-xs text-gray-400 flex items-center space-x-4 pt-4">
