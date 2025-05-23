@@ -130,7 +130,7 @@ const blogPosts = [
    {
     id: 6,
     title: "Are LLMs Just ETL Pipelines on Steroids? Rethinking AI Training",
-    subtitle: "We talk a lot about Large Language Models (LLMs) like GPT, Claude, and Llama – their incredible generative capabilities, their potential, and their complexities. But have you ever stopped to think about the process that gets them there? Strip away the most advanced layers, and the initial training phase starts to look surprisingly familiar to something many of us work with daily: ETL (Extract, Transform, Load).",
+    subtitle: "Behind every LLM like GPT or Claude lies a process strikingly similar to ETL: Extract, Transform, Load.",
     date: "Apr 15, 2025",
     readTime: "7 min",
     source: "https://dev.to/ayazmirza54/are-llms-just-etl-pipelines-on-steroids-rethinking-ai-training-1i0c",
