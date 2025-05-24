@@ -4,7 +4,7 @@ import { SearchBar } from './components/SearchBar';
 import { CategoryFilter } from './components/CategoryFilter';
 import { ToolCard } from './components/ToolCard';
 import { BlogCard } from './components/BlogCard';
-import { Footer } from './components/Footer'
+import { Footer } from './components/Footer';
 import './atariTheme.css';
 import { Analytics } from "@vercel/analytics/react"
 import logo from './assets/logo.png'
