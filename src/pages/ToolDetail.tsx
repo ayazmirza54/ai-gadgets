@@ -73,7 +73,7 @@ export default function ToolDetail() {
           <div className="mt-10 flex gap-6 border-b border-ink-700/0">
             {(['overview', 'reviews', 'pricing'] as const).map((t) => (
               <button key={t} onClick={() => setTab(t)} className={cx('relative pb-3 text-sm capitalize transition', tab === t ? 'text-white' : 'text-ink-400 hover:text-ink-200')}>
-                {t}{t === 'reviews' && <span className="ml-1.5 text-ink-500">{compact(tool.reviews)}</span>}
+                {t}{t === 'reviews' && <span className="ml-1.5 text-ink-400">{compact(tool.reviews)}</span>}
                 {tab === t && <span className="absolute inset-x-0 -bottom-px h-0.5 rounded-full bg-zap" />}
               </button>
             ))}
@@ -174,7 +174,7 @@ export default function ToolDetail() {
                   </ul>
                 </div>
               ))}
-              <p className="text-xs text-ink-500 md:col-span-3">Pricing is provided by the maker and may change. Last verified this month.</p>
+              <p className="text-xs text-ink-400 md:col-span-3">Pricing is provided by the maker and may change. Last verified this month.</p>
             </div>
           )}
         </div>

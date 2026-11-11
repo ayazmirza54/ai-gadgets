@@ -74,23 +74,24 @@ export default function Prompts() {
           <div className="mb-6 flex flex-wrap items-center gap-2">
             <div className="flex rounded-full border border-ink-700 bg-ink-900 p-1">
               {tabs.map((t) => (
-                <button key={t.k} onClick={() => setTab(t.k)} className={cx('inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition', tab === t.k ? 'bg-white text-ink-950' : 'text-ink-300 hover:text-white')}>
+                <button key={t.k} onClick={() => setTab(t.k)} aria-label={t.l} aria-pressed={tab === t.k} className={cx('inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition', tab === t.k ? 'bg-white text-ink-950' : 'text-ink-300 hover:text-white')}>
                   <t.i className="h-3.5 w-3.5" /> <span className="hidden sm:inline">{t.l}</span>
                 </button>
               ))}
             </div>
             <div className="ml-auto flex gap-2">
-              <select value={cat} onChange={(e) => setCat(e.target.value)} className="rounded-full border border-ink-700 bg-ink-900 px-3 py-1.5 text-xs text-ink-200 focus:outline-none">
+              <select aria-label="Category" value={cat} onChange={(e) => setCat(e.target.value)} className="rounded-full border border-ink-700 bg-ink-900 px-3 py-1.5 text-xs text-ink-200 focus:outline-none">
                 <option value="all">All categories</option>
                 {categories.map((c) => <option key={c.slug} value={c.slug}>{c.name}</option>)}
               </select>
-              <select value={price} onChange={(e) => setPrice(e.target.value as typeof price)} className="rounded-full border border-ink-700 bg-ink-900 px-3 py-1.5 text-xs text-ink-200 focus:outline-none">
+              <select aria-label="Price" value={price} onChange={(e) => setPrice(e.target.value as typeof price)} className="rounded-full border border-ink-700 bg-ink-900 px-3 py-1.5 text-xs text-ink-200 focus:outline-none">
                 <option value="all">Free & paid</option>
                 <option value="free">Free only</option>
                 <option value="paid">Premium</option>
               </select>
             </div>
           </div>
+          <h2 className="sr-only">Prompts</h2>
           {list.length ? (
             <div className="grid gap-4 sm:grid-cols-2">{list.map((p) => <PromptCard key={p.id} prompt={p} />)}</div>
           ) : (
@@ -104,8 +105,8 @@ export default function Prompts() {
             <ol className="space-y-3">
               {creators.map((c, i) => (
                 <li key={c.handle} className="flex items-center gap-3">
-                  <span className="w-4 font-mono text-xs text-ink-500">{i + 1}</span>
-                  <Avatar name={c.name} hue={c.hue} size="h-8 w-8 text-[11px]" />
+                  <span className="w-4 font-mono text-xs text-ink-400">{i + 1}</span>
+                  <Avatar name={c.name} hue={c.hue} size="h-8 w-8 text-xs" />
                   <div className="min-w-0 flex-1">
                     <p className="truncate text-sm font-medium">{c.name}</p>
                     <p className="text-xs text-ink-400">@{c.handle} · {c.count} prompts</p>

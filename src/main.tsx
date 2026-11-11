@@ -1,15 +1,22 @@
 import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import App from './App';
 import './index.css';
 
-createRoot(document.getElementById('root')!).render(
+const app = (
   <StrictMode>
     <BrowserRouter>
       <App />
       <Analytics />
+      <SpeedInsights />
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 );
+
+const root = document.getElementById('root')!;
+// Pages are prerendered at build time; hydrate them instead of re-rendering from scratch.
+if (root.firstElementChild) hydrateRoot(root, app);
+else createRoot(root).render(app);

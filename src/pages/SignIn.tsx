@@ -22,7 +22,7 @@ export default function SignIn() {
           <button className="btn-outline btn-lg w-full"><Github className="h-4 w-4" /> Continue with GitHub</button>
         </div>
 
-        <div className="my-6 flex items-center gap-3 text-xs text-ink-500"><span className="h-px flex-1 bg-ink-700" />or<span className="h-px flex-1 bg-ink-700" /></div>
+        <div className="my-6 flex items-center gap-3 text-xs text-ink-400"><span className="h-px flex-1 bg-ink-700" />or<span className="h-px flex-1 bg-ink-700" /></div>
 
         {sent ? (
           <p className="card flex items-center gap-3 p-4 text-sm"><Mail className="h-4 w-4 text-zap" /> Magic link sent. Check your inbox.</p>
@@ -32,7 +32,7 @@ export default function SignIn() {
             <button className="btn-zap btn-lg w-full">Email me a magic link <ArrowRight className="h-4 w-4" /></button>
           </form>
         )}
-        <p className="mt-8 text-xs text-ink-500">By continuing you agree to our <Link to="/" className="underline">Terms</Link> and <Link to="/" className="underline">Privacy Policy</Link>.</p>
+        <p className="mt-8 text-xs text-ink-400">By continuing you agree to our <Link to="/" className="underline">Terms</Link> and <Link to="/" className="underline">Privacy Policy</Link>.</p>
       </div>
 
       <div className="relative hidden h-[560px] overflow-hidden rounded-[32px] border border-ink-700 bg-ink-900 lg:block">

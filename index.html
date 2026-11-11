@@ -9,34 +9,17 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="manifest" href="/site.webmanifest" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-
-    <title>Zapp — The marketplace for everything AI</title>
-    <meta name="description" content="Discover AI tools, copy battle-tested prompts, deploy agents and learn what's new in AI — all in one place. tryzapp.in" />
-
-    <meta property="og:url" content="https://tryzapp.in" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Zapp — The marketplace for everything AI" />
-    <meta property="og:site_name" content="Zapp" />
-    <meta property="og:image" content="https://tryzapp.in/og-image.jpg" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Zapp — Everything AI. One zap away. AI tools, Prompt Hub, agents and learning at tryzapp.in" />
-    <meta property="og:description" content="AI tools marketplace, prompt hub, agents and learning — all in one place." />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="tryzapp.in" />
-    <meta property="twitter:url" content="https://tryzapp.in" />
-    <meta name="twitter:title" content="Zapp — The marketplace for everything AI" />
-    <meta name="twitter:description" content="AI tools marketplace, prompt hub, agents and learning — all in one place." />
-    <meta name="twitter:image" content="https://tryzapp.in/og-image.jpg" />
-    <meta name="twitter:image:alt" content="Zapp — Everything AI. One zap away. AI tools, Prompt Hub, agents and learning at tryzapp.in" />
+    <!-- Fonts load without blocking first paint; text shows in the fallback font until they arrive. -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
+    <!--app-head-->
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

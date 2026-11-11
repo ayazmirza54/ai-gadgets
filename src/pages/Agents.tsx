@@ -17,7 +17,7 @@ export default function Agents() {
     <>
       <PageHero
         eyebrow="Agents · Early access"
-        title={<>AI that does the work, <span className="text-ink-500">not just the chat.</span></>}
+        title={<>AI that does the work, <span className="text-ink-400">not just the chat.</span></>}
         subtitle="Pick a ready-made agent, connect your apps, and let it run. No code, no prompt engineering, no babysitting."
       >
         <div className="mt-8 flex flex-wrap gap-3">
@@ -36,7 +36,7 @@ export default function Agents() {
             <div key={s.t} className="card p-6">
               <div className="flex items-center justify-between">
                 <s.i className="h-6 w-6 text-zap" />
-                <span className="font-mono text-xs text-ink-500">0{n + 1}</span>
+                <span className="font-mono text-xs text-ink-400">0{n + 1}</span>
               </div>
               <p className="mt-6 font-display text-xl font-semibold">{s.t}</p>
               <p className="mt-1 text-sm text-ink-400">{s.d}</p>

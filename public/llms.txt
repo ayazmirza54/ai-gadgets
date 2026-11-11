@@ -1,0 +1,28 @@
+# Zapp
+
+> Zapp (tryzapp.in) is a marketplace for everything AI: a directory of reviewed AI tools, a Prompt Hub of copyable and sellable prompts, ready-made AI agents, and guides for learning AI. Built in India; prices are shown in INR.
+
+Zapp helps people find the right AI tool for a job, reuse prompts that already work, and publish their own tools, prompts and agents.
+
+## Main sections
+
+- [AI Tools Marketplace](https://tryzapp.in/tools): Hand-reviewed AI tools across writing, coding, image, video, audio, productivity, marketing, research, agents, data, design and education, with pricing and supported models.
+- [Prompt Hub](https://tryzapp.in/prompts): Fill-in-the-blank prompts for ChatGPT, Claude, Gemini, Midjourney and Flux. Free prompts can be copied directly; premium prompts are sold by their creators.
+- [Agents](https://tryzapp.in/agents): Ready-made AI agents (early access) for email triage, research, support, content and recruiting.
+- [Learn](https://tryzapp.in/learn): Guides, build logs and deep dives on building with AI.
+- [Pricing](https://tryzapp.in/pricing): Free, Pro and Creator plans.
+- [Submit](https://tryzapp.in/submit): List an AI tool, prompt or agent. Creators keep 85% of paid sales.
+
+## Featured tools
+
+- [Text to Content AI](https://tryzapp.in/tools/text-to-content-ai): Turn one idea into blogs, threads, scripts and captions.
+- [QuerySmith AI](https://tryzapp.in/tools/querysmith-ai): Plain English to SQL for Postgres, MySQL, BigQuery and Snowflake.
+- [Email Smith AI](https://tryzapp.in/tools/email-smith-ai): AI email drafting with tone presets.
+- [Unix Bot AI](https://tryzapp.in/tools/unix-bot-ai): Natural language to explained shell commands.
+- [WebSearch AI](https://tryzapp.in/tools/websearch-ai): AI search with cited answers.
+- [IntelliSketch AI](https://tryzapp.in/tools/intellisketch-ai): A canvas that solves handwritten maths and diagrams.
+- [Chat2PDF](https://tryzapp.in/tools/chat2pdf): Ask questions of any PDF with page references.
+
+## Optional
+
+- [Sitemap](https://tryzapp.in/sitemap.xml): Every public page.

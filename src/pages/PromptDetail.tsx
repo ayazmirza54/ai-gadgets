@@ -44,7 +44,7 @@ export default function PromptDetail() {
 
             <div className="mt-6 flex flex-wrap items-center gap-5 text-sm text-ink-400">
               <span className="flex items-center gap-2">
-                <Avatar name={prompt.author.name} hue={prompt.author.hue} size="h-8 w-8 text-[11px]" />
+                <Avatar name={prompt.author.name} hue={prompt.author.hue} size="h-8 w-8 text-xs" />
                 <span><span className="text-ink-100">{prompt.author.name}</span> · @{prompt.author.handle}</span>
               </span>
               <span className="inline-flex items-center gap-1"><Play className="h-3.5 w-3.5" /> {compact(prompt.uses)} uses</span>
@@ -95,9 +95,9 @@ export default function PromptDetail() {
                   ['Sameer K', 'bg-aqua', 'Works even better if you add one line of the prospect’s recent post as context.'],
                 ].map(([n, h, t]) => (
                   <div key={n} className="flex gap-3">
-                    <Avatar name={n} hue={h} size="h-8 w-8 text-[11px]" />
+                    <Avatar name={n} hue={h} size="h-8 w-8 text-xs" />
                     <div>
-                      <p className="text-sm"><span className="font-medium">{n}</span> <span className="text-xs text-ink-500">· 3d</span></p>
+                      <p className="text-sm"><span className="font-medium">{n}</span> <span className="text-xs text-ink-400">· 3d</span></p>
                       <p className="mt-1 text-sm text-ink-300">{t}</p>
                     </div>
                   </div>
@@ -114,7 +114,7 @@ export default function PromptDetail() {
                 <div className="space-y-3">
                   {vars.map((v) => (
                     <label key={v} className="block">
-                      <span className="mb-1 block font-mono text-[11px] text-zap">{v}</span>
+                      <span className="mb-1 block font-mono text-xs text-zap">{v}</span>
                       <input value={values[v] ?? ''} onChange={(e) => setValues((s) => ({ ...s, [v]: e.target.value }))} placeholder={v.replace(/_/g, ' ')} className="input py-2" />
                     </label>
                   ))}

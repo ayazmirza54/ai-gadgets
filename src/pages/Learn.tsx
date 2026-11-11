@@ -55,7 +55,7 @@ export default function Learn() {
                 <p className="eyebrow">{a.tag} · {a.readTime}</p>
                 <h3 className="mt-3 font-display text-xl font-semibold leading-snug tracking-tight">{a.title}</h3>
                 <p className="mt-2 line-clamp-2 text-sm text-ink-400">{a.excerpt}</p>
-                <p className="mt-auto pt-5 text-xs text-ink-500">{a.date}</p>
+                <p className="mt-auto pt-5 text-xs text-ink-400">{a.date}</p>
               </div>
             </a>
           ))}

@@ -61,7 +61,7 @@ export function Navbar() {
           >
             <Search className="h-4 w-4" />
             <span className="pr-6">Search tools, prompts…</span>
-            <kbd className="rounded-md border border-ink-600 bg-ink-800 px-1.5 py-0.5 font-mono text-[10px] text-ink-300">⌘K</kbd>
+            <kbd className="rounded-md border border-ink-600 bg-ink-800 px-1.5 py-0.5 font-mono text-xs text-ink-300">⌘K</kbd>
           </button>
           <button onClick={openPalette} className="btn-ghost h-9 w-9 p-0 md:hidden" aria-label="Search">
             <Search className="h-[18px] w-[18px]" />

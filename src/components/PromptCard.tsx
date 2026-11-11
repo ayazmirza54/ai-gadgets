@@ -42,20 +42,20 @@ export function PromptCard({ prompt }: { prompt: Prompt }) {
   const [liked, setLiked] = useState(false);
   return (
     <Link to={`/prompts/${prompt.id}`} className="card card-hover group flex flex-col overflow-hidden">
-      <div className="relative h-40 overflow-hidden border-b border-ink-700/70 bg-ink-950 p-4 font-mono text-[11.5px] leading-relaxed text-ink-300">
+      <div className="relative h-40 overflow-hidden border-b border-ink-700/70 bg-ink-950 p-4 font-mono text-xs leading-relaxed text-ink-300">
         <div className="mb-2 flex items-center gap-1.5">
           <span className="h-2 w-2 rounded-full bg-ink-600" />
           <span className="h-2 w-2 rounded-full bg-ink-600" />
           <span className="h-2 w-2 rounded-full bg-ink-600" />
-          <span className="ml-auto rounded-md border border-ink-700 px-1.5 py-0.5 text-[10px] text-ink-400">{prompt.model}</span>
+          <span className="ml-auto rounded-md border border-ink-700 px-1.5 py-0.5 text-xs text-ink-400">{prompt.model}</span>
         </div>
         <PromptBody text={prompt.body} className="whitespace-pre-line" />
         <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-ink-950 to-transparent" />
       </div>
       <div className="flex flex-1 flex-col p-5">
         <div className="flex items-center gap-2">
-          {prompt.staffPick && <span className="text-[10px] font-semibold uppercase tracking-wider text-zap">Staff pick</span>}
-          {prompt.isNew && <span className="text-[10px] font-semibold uppercase tracking-wider text-aqua">New</span>}
+          {prompt.staffPick && <span className="text-xs font-semibold uppercase tracking-wider text-zap">Staff pick</span>}
+          {prompt.isNew && <span className="text-xs font-semibold uppercase tracking-wider text-aqua">New</span>}
         </div>
         <h3 className="mt-1 font-display text-[17px] font-semibold leading-snug tracking-tight">{prompt.title}</h3>
         <p className="mt-1.5 line-clamp-2 text-sm text-ink-400">{prompt.description}</p>
@@ -67,9 +67,10 @@ export function PromptCard({ prompt }: { prompt: Prompt }) {
           <div className="flex items-center gap-3 text-xs text-ink-400">
             <button
               onClick={(e) => { e.preventDefault(); setLiked((l) => !l); }}
-              className={cx('relative z-10 inline-flex items-center gap-1 transition-colors hover:text-ember', liked && 'text-ember')}
+              className={cx('relative z-10 -my-1.5 inline-flex min-h-6 items-center gap-1 rounded-full px-1.5 py-1.5 transition-colors hover:text-ember', liked && 'text-ember')}
+              aria-pressed={liked}
             >
-              <Heart className={cx('h-3.5 w-3.5', liked && 'fill-ember')} /> {compact(prompt.likes + (liked ? 1 : 0))}
+              <Heart className={cx('h-3.5 w-3.5', liked && 'fill-ember')} /> <span className="sr-only">Like,</span> {compact(prompt.likes + (liked ? 1 : 0))}
             </button>
             <span className="inline-flex items-center gap-1"><Play className="h-3 w-3" /> {compact(prompt.uses)}</span>
             <span className={cx('rounded-full px-2 py-0.5 font-medium', prompt.price ? 'bg-white/5 text-ink-100' : 'bg-zap/10 text-zap')}>

@@ -1,0 +1,24 @@
+# Zapp — https://tryzapp.in
+User-agent: *
+Allow: /
+Disallow: /signin
+
+# AI search & assistant crawlers are welcome (helps Zapp get cited in AI answers).
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://tryzapp.in/sitemap.xml

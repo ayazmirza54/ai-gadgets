@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useHydratedSearchParams } from '../lib/useHydratedSearchParams';
 import { Search, LayoutGrid, List, SlidersHorizontal, X, ChevronDown } from 'lucide-react';
 import { tools, type Pricing } from '../data/tools';
 import { categories, categoryBySlug } from '../data/categories';
@@ -12,7 +12,7 @@ const sorts = { trending: 'Trending', rating: 'Top rated', new: 'Newest', saves:
 const allModels = Array.from(new Set(tools.flatMap((t) => t.models))).sort();
 
 export default function Tools() {
-  const [params, setParams] = useSearchParams();
+  const [params, setParams] = useHydratedSearchParams();
   const q = params.get('q') ?? '';
   const category = params.get('category') ?? 'all';
   const sort = (params.get('sort') as keyof typeof sorts) ?? 'trending';
@@ -93,7 +93,7 @@ export default function Tools() {
     <>
       <PageHero
         eyebrow="AI Tools Marketplace"
-        title={cat ? <>{cat.name} <span className="text-ink-500">AI tools</span></> : <>Every AI tool, <span className="text-ink-500">reviewed.</span></>}
+        title={cat ? <>{cat.name} <span className="text-ink-400">AI tools</span></> : <>Every AI tool, <span className="text-ink-400">reviewed.</span></>}
         subtitle={cat ? cat.blurb + ' — hand-picked and rated by the community.' : 'Search 2,400+ hand-reviewed tools by what you want to get done, not by buzzwords.'}
       >
         <div className="mt-8 flex max-w-2xl items-center gap-3 rounded-2xl border border-ink-600 bg-ink-900/90 p-1.5 pl-4 focus-within:border-zap/50">
@@ -117,7 +117,7 @@ export default function Tools() {
           <div className="mb-6 flex flex-wrap items-center gap-3">
             <p className="text-sm text-ink-400"><span className="font-medium text-white">{list.length}</span> tools</p>
             <button onClick={() => setMobileFilters(true)} className="chip py-1.5 lg:hidden">
-              <SlidersHorizontal className="h-3.5 w-3.5" /> Filters {activeCount > 0 && <span className="rounded-full bg-zap px-1.5 text-[10px] text-ink-950">{activeCount}</span>}
+              <SlidersHorizontal className="h-3.5 w-3.5" /> Filters {activeCount > 0 && <span className="rounded-full bg-zap px-1.5 text-xs text-ink-950">{activeCount}</span>}
             </button>
             <div className="ml-auto flex items-center gap-2">
               <label className="relative">
@@ -141,6 +141,7 @@ export default function Tools() {
             </div>
           </div>
 
+          <h2 className="sr-only">Tools</h2>
           {list.length === 0 ? (
             <EmptyState title="No tools match… yet" body="Try a broader search or clear a filter. Know a tool we’re missing? Submit it." />
           ) : layout === 'grid' ? (
@@ -188,7 +189,7 @@ function FilterRow({ active, onClick, label, icon, count }: { active: boolean; o
     >
       {icon}
       <span className="flex-1">{label}</span>
-      <span className="font-mono text-[11px] text-ink-500">{count}</span>
+      <span className="font-mono text-xs text-ink-400">{count}</span>
     </button>
   );
 }
