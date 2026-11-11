@@ -1,38 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  font-family: 'Press Start 2P', monospace;
-  -webkit-font-smoothing: none;
-  -moz-osx-font-smoothing: none;
-  background: #000000;
-  background-image: 
-    linear-gradient(rgba(40, 40, 40, 0.2) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(40, 40, 40, 0.2) 1px, transparent 1px);
-  background-size: 20px 20px;
-  image-rendering: pixelated;
+@layer base {
+  html { color-scheme: dark; }
+  body {
+    @apply bg-ink-950 text-ink-100 font-sans antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+  ::selection { background: #DFFF4F; color: #08080A; }
+  :focus-visible { outline: 2px solid #DFFF4F; outline-offset: 2px; border-radius: 6px; }
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+@layer components {
+  .container-z { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 active:scale-[.98] disabled:opacity-50 disabled:pointer-events-none whitespace-nowrap; }
+  .btn-zap { @apply btn bg-zap text-ink-950 hover:bg-zap-400 shadow-[0_0_0_1px_rgba(223,255,79,.4),0_8px_30px_-8px_rgba(223,255,79,.55)]; }
+  .btn-ghost { @apply btn text-ink-200 hover:text-white hover:bg-white/5; }
+  .btn-outline { @apply btn border border-ink-600 text-ink-100 hover:border-ink-400 hover:bg-white/[.03]; }
+  .btn-lg { @apply px-6 py-3 text-[15px]; }
+
+  .card { @apply rounded-2xl border border-ink-700/80 bg-ink-900/70; }
+  .card-hover { @apply transition-all duration-300 hover:border-ink-500 hover:bg-ink-850 hover:-translate-y-0.5; }
+
+  .chip { @apply inline-flex items-center gap-1.5 rounded-full border border-ink-700 bg-ink-900 px-3 py-1 text-xs font-medium text-ink-300 transition-colors; }
+  .chip-active { @apply border-zap/50 bg-zap/10 text-zap; }
+
+  .eyebrow { @apply inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[.18em] text-ink-400; }
+
+  .input { @apply w-full rounded-xl border border-ink-700 bg-ink-900 px-4 py-2.5 text-sm text-ink-100 placeholder:text-ink-400 transition-colors focus:border-zap/60 focus:outline-none focus:ring-4 focus:ring-zap/10; }
+
+  .h-display { @apply font-display font-semibold tracking-[-0.035em] leading-[0.95]; }
 }
 
-::-webkit-scrollbar-track {
-  background: #000000;
-  border-left: 2px solid #ffffff;
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  .mask-fade-b { mask-image: linear-gradient(to bottom, black 40%, transparent); }
+  .mask-fade-x { mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
+  .scrollbar-none { scrollbar-width: none; }
+  .scrollbar-none::-webkit-scrollbar { display: none; }
+  .noise::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .05; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
 }
 
-::-webkit-scrollbar-thumb {
-  background: #ffffff;
-  border-radius: 0;
-  border: 2px solid #ffffff;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #dddddd;
-}
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #08080A; }
+::-webkit-scrollbar-thumb { background: #22222A; border-radius: 10px; border: 2px solid #08080A; }
+::-webkit-scrollbar-thumb:hover { background: #2E2E37; }

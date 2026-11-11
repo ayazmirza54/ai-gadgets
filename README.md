@@ -1,115 +1,52 @@
-# 🧠 AI Gadgets - AI Tools Marketplace
+# ⚡ Zapp — the marketplace for everything AI
 
-Welcome to **AI Gadgets**, a retro-style AI tools discovery platform built using **React**, **TypeScript**, **Vite**, and **Tailwind CSS** with a pixel-perfect Atari-themed design 🎮.
+**[tryzapp.in](https://tryzapp.in)** · AI tools marketplace, Prompt Hub, agents and learning — in one place.
 
----
+> Status: **UI revamp**. Every screen is built and interactive on the client using mock data. Backend, auth, payments and persistence come next.
 
-## 🚀 Features
+## Pages
 
-- 🧠 Curated list of AI tools across categories like Dev, Productivity, Image, and ML
-- 🔍 Search functionality for instant tool discovery
-- 🎨 Retro 8-bit UI inspired by Atari aesthetics
-- 📚 Developer blogs integrated with external links
-- 🧰 Tools tagged with categories, rating, and thumbnails
-- 📈 Integrated with Vercel Analytics
-- 🎯 Optimized for performance with Vite and lazy image loading
+| Route | What it is |
+| --- | --- |
+| `/` | Landing: hero search, featured tools, platform bento, trending tools, categories, Prompt Hub showcase, creator CTA, articles, newsletter |
+| `/tools` | Marketplace with category, pricing and model filters, sorting, grid/list views (URL-driven `?q=&category=&sort=`) |
+| `/tools/:slug` | Tool detail: overview, reviews, pricing tabs, similar tools, paired prompts |
+| `/prompts` | Prompt Hub: tabs (trending/new/most used/staff picks), model chips, category and price filters, top creators |
+| `/prompts/:id` | Prompt detail: live fill-in-the-blank variables, copy, premium lock, “open in” model, discussion |
+| `/agents` | Agents (early access) showcase |
+| `/learn` | Articles and guides |
+| `/submit` | Submit a tool, prompt or agent (with optional paid listing) |
+| `/pricing` | Free / Pro / Creator plans, comparison table, FAQ |
+| `/signin` | Auth screen (Google, GitHub, magic link) |
 
----
+Global **⌘K / Ctrl+K** (or `/`) opens a command palette that searches tools, prompts and categories.
 
-## 📁 Folder Structure
+## Stack
 
-```bash
-.
-├── public/             # Static assets like favicon, manifest
-├── src/
-│   ├── components/     # Reusable UI components
-│   ├── App.tsx         # Main app logic
-│   ├── index.css       # Tailwind base + custom scrollbar
-│   ├── main.tsx        # Root file
-│   ├── atariTheme.css  # Atari-themed pixel styling
-├── .bolt/              # Bolt template config
-├── tsconfig*.json      # TypeScript configurations
-├── tailwind.config.js  # Tailwind settings
-├── postcss.config.js   # PostCSS plugins
-├── vite.config.ts      # Vite project settings
-├── eslint.config.js    # ESLint setup
-├── package.json        # Dependencies and scripts
+React 18 + TypeScript · Vite · Tailwind CSS · React Router · lucide-react · Vercel Analytics
+
+## Design system
+
+- **Palette:** ink neutrals (`ink-950` → `ink-100`) with an electric `zap` lime accent, plus `volt`, `aqua` and `ember` supporting hues (`tailwind.config.js`)
+- **Type:** Bricolage Grotesque (display), Inter (UI), JetBrains Mono (prompts & labels)
+- **Primitives:** `.btn-zap`, `.btn-outline`, `.btn-ghost`, `.card`, `.chip`, `.input`, `.eyebrow`, `.h-display` in `src/index.css`
+
+## Structure
+
+```
+src/
+  components/   Navbar, Footer, CommandPalette, ToolCard, PromptCard, badges, section headers
+  pages/        One file per route
+  data/         Mock tools, prompts, categories, articles (replace with API later)
+  lib/ui.ts     Shared helpers + palette context
 ```
 
----
-
-## 🧪 Tech Stack
-
-| Purpose         | Tool                         |
-|----------------|------------------------------|
-| Frontend       | React + TypeScript           |
-| Styling        | Tailwind CSS + Atari Theme   |
-| Icons          | lucide-react                 |
-| Build Tool     | Vite                         |
-| Linting        | ESLint + TypeScript plugin   |
-| Analytics      | Vercel Analytics             |
-
----
-
-## 📦 Installation
+## Develop
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/aigadgets.show.git
-cd aigadgets.show
-
-# Install dependencies
 npm install
-```
-
----
-
-## 💻 Development
-
-```bash
-# Start the development server
 npm run dev
-```
-
----
-
-## 🛠 Build for Production
-
-```bash
 npm run build
 ```
 
----
-
-## ✅ Lint the Code
-
-```bash
-npm run lint
-```
-
----
-
-## 🌐 Live Site
-
-🔗 [https://aigadgets.show](https://aigadgets.show)
-
----
-
-## 📝 Blogs Showcase
-
-Explore developer blogs like:
-- IntelliSketch: AI-powered drawing tool
-- ChatGPT loop automation with AutoGPT
-- Gemini API migration
-
-Blogs are accessible directly on the site through the **Blogs** section.
-
----
-
-## 📄 License
-
-This project is open-sourced under the **MIT License**.
-
----
-
-Let me know if you'd like me to add **badges**, **contribution guidelines**, or **deployment steps (e.g., Vercel)**.
+`vercel.json` rewrites all routes to `index.html` so client-side routes work on refresh.
