@@ -59,8 +59,8 @@ function Hero() {
             Everything AI.
             <br />
             <span className="relative inline-block">
-              <span className="relative z-10 text-zap">One zap</span>
-              <svg className="absolute -bottom-2 left-0 z-0 w-full text-zap/40" viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden>
+              <span className="relative z-10 bg-gradient-to-r from-zap via-[#14EF9A] to-aqua bg-clip-text text-transparent">One zap</span>
+              <svg className="absolute -bottom-2 left-0 z-0 w-full text-aqua/40" viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden>
                 <path d="M2 9 C 60 2, 120 2, 160 6 S 260 11, 298 4" stroke="currentColor" strokeWidth="3" fill="none" strokeLinecap="round" />
               </svg>
             </span>{' '}
@@ -86,7 +86,7 @@ function Hero() {
             </div>
             <button
               onClick={open}
-              className="group flex w-full items-center gap-3 rounded-2xl border border-ink-600 bg-ink-900/90 p-2 pl-5 text-left shadow-[0_20px_80px_-20px_rgba(223,255,79,.25)] backdrop-blur transition hover:border-zap/50"
+              className="group flex w-full items-center gap-3 rounded-2xl border border-ink-600 bg-ink-900/90 p-2 pl-5 text-left shadow-[0_20px_80px_-20px_rgba(34,240,106,.22)] backdrop-blur transition hover:border-zap/50"
             >
               <Search className="h-5 w-5 text-ink-400" />
               <span className="flex-1 truncate text-[15px] text-ink-400">
@@ -222,7 +222,7 @@ function Pillars() {
           <p className="mt-2 text-sm text-ink-400">Deploy ready-made AI agents that do the work, not just the chat.</p>
         </Link>
         <Link to="/learn" className="card card-hover group p-7 md:col-span-2">
-          <BookOpen className="h-7 w-7 text-ember" />
+          <BookOpen className="h-7 w-7 text-volt" />
           <h3 className="h-display mt-6 text-2xl">Learn</h3>
           <p className="mt-2 text-sm text-ink-400">Guides, build logs and the AI news that actually matters.</p>
         </Link>

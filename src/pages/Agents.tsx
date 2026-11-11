@@ -7,7 +7,7 @@ const agents = [
   { icon: Inbox, name: 'Inbox Zero', by: 'Zapp Labs', desc: 'Triages email, drafts replies and flags what needs you.', runs: '41k', tint: 'text-zap bg-zap/10', integrations: ['Gmail', 'Slack'] },
   { icon: LineChart, name: 'Market Watcher', by: 'quantmind', desc: 'Monitors competitors and sends a Monday-morning brief.', runs: '12k', tint: 'text-aqua bg-aqua/10', integrations: ['Web', 'Notion'] },
   { icon: Newspaper, name: 'Content Engine', by: 'meerawrites', desc: 'Researches, drafts and schedules a week of posts.', runs: '28k', tint: 'text-volt bg-volt/10', integrations: ['LinkedIn', 'X'] },
-  { icon: Headphones, name: 'Support Copilot', by: 'helpdeskhq', desc: 'Answers tickets from your docs with human hand-off.', runs: '19k', tint: 'text-ember bg-ember/10', integrations: ['Zendesk', 'Intercom'] },
+  { icon: Headphones, name: 'Support Copilot', by: 'helpdeskhq', desc: 'Answers tickets from your docs with human hand-off.', runs: '19k', tint: 'text-volt bg-volt/10', integrations: ['Zendesk', 'Intercom'] },
   { icon: Users, name: 'Recruiter Scout', by: 'hireloop', desc: 'Sources candidates and writes personalised outreach.', runs: '7.4k', tint: 'text-zap bg-zap/10', integrations: ['LinkedIn', 'Sheets'] },
   { icon: FileSearch, name: 'Contract Reviewer', by: 'legalease', desc: 'Flags risky clauses and suggests redlines in minutes.', runs: '5.1k', tint: 'text-aqua bg-aqua/10', integrations: ['Drive', 'DocuSign'] },
 ];
