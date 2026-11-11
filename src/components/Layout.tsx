@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { Suspense, useCallback, useEffect, useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
@@ -34,7 +34,9 @@ export function Layout() {
       <div className="flex min-h-screen flex-col">
         <Navbar />
         <main className="flex-1">
-          <Outlet />
+          <Suspense fallback={<div className="min-h-[60vh]" />}>
+            <Outlet />
+          </Suspense>
         </main>
         <Footer />
       </div>

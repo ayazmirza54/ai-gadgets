@@ -30,6 +30,10 @@ function siteIntegrations(env: Record<string, string>): Plugin {
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   plugins: [react(), siteIntegrations(loadEnv(mode, process.cwd(), 'VITE_'))],
+  build: {
+    // Read by scripts/prerender.mjs to preload each page's chunk.
+    manifest: true,
+  },
   optimizeDeps: {
     exclude: ['lucide-react'],
   },

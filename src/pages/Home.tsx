@@ -55,7 +55,7 @@ function Hero() {
             <ArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-0.5" />
           </Link>
 
-          <h1 className="h-display animate-fade-up mt-8 text-balance text-[3.4rem] sm:text-7xl lg:text-[6.5rem]" style={{ animationDelay: '60ms' }}>
+          <h1 className="h-display mt-8 text-balance text-[3.4rem] sm:text-7xl lg:text-[6.5rem]">
             Everything AI.
             <br />
             <span className="relative inline-block">
@@ -67,12 +67,12 @@ function Hero() {
             away.
           </h1>
 
-          <p className="animate-fade-up mx-auto mt-7 max-w-2xl text-balance text-lg text-ink-300 sm:text-xl" style={{ animationDelay: '120ms' }}>
+          <p className="mx-auto mt-7 max-w-2xl text-balance text-lg text-ink-300 sm:text-xl">
             Discover 2,400+ AI tools, copy battle-tested prompts, deploy ready-made agents and stay ahead of what’s next — all in one marketplace.
           </p>
 
           {/* Search */}
-          <div className="animate-fade-up mx-auto mt-10 max-w-2xl" style={{ animationDelay: '180ms' }}>
+          <div className="mx-auto mt-10 max-w-2xl">
             <div className="mb-3 flex justify-center gap-1">
               {(['Tools', 'Prompts', 'Agents'] as const).map((t) => (
                 <button
