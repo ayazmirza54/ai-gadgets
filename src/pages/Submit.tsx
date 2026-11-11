@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import { useSearchParams, Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { useHydratedSearchParams } from '../lib/useHydratedSearchParams';
 import { Wrench, MessageSquareText, Bot, Upload, Check, ArrowRight, PartyPopper } from 'lucide-react';
 import { categories, models } from '../data/categories';
 import { PageHero } from '../components/Section';
@@ -12,9 +14,13 @@ const types = [
 ] as const;
 
 export default function Submit() {
-  const [params] = useSearchParams();
-  const initial = (params.get('type') as (typeof types)[number]['k']) || 'tool';
-  const [type, setType] = useState<(typeof types)[number]['k']>(types.some((t) => t.k === initial) ? initial : 'tool');
+  const [params] = useHydratedSearchParams();
+  const [type, setType] = useState<(typeof types)[number]['k']>('tool');
+  const requested = params.get('type');
+  useEffect(() => {
+    const match = types.find((t) => t.k === requested);
+    if (match) setType(match.k);
+  }, [requested]);
   const [sent, setSent] = useState(false);
   const [paid, setPaid] = useState(false);
 
@@ -73,7 +79,7 @@ export default function Submit() {
               <label className="card flex cursor-pointer flex-col items-center justify-center border-dashed py-10 text-center transition hover:border-zap/50">
                 <Upload className="h-6 w-6 text-ink-400" />
                 <p className="mt-3 text-sm">Drop files or <span className="text-zap">browse</span></p>
-                <p className="mt-1 text-xs text-ink-500">PNG, JPG or GIF · up to 10MB</p>
+                <p className="mt-1 text-xs text-ink-400">PNG, JPG or GIF · up to 10MB</p>
                 <input type="file" multiple className="sr-only" />
               </label>
             </div>
@@ -95,7 +101,7 @@ export default function Submit() {
 
           <div className="flex items-center gap-4 border-t border-ink-700 pt-6">
             <button className="btn-zap btn-lg">Submit for review <ArrowRight className="h-4 w-4" /></button>
-            <p className="text-xs text-ink-500">By submitting you agree to the creator terms.</p>
+            <p className="text-xs text-ink-400">By submitting you agree to the creator terms.</p>
           </div>
         </form>
 
@@ -105,7 +111,7 @@ export default function Submit() {
             <ol className="space-y-5">
               {['We review it by hand (≈48h)', 'It goes live with a launch badge', 'Featured in the Zapp Weekly if it’s great', 'Track views, saves & sales in your dashboard'].map((s, i) => (
                 <li key={s} className="flex gap-3 text-sm">
-                  <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full border border-ink-600 font-mono text-[11px] text-ink-300">{i + 1}</span>
+                  <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full border border-ink-600 font-mono text-xs text-ink-300">{i + 1}</span>
                   <span className="text-ink-200">{s}</span>
                 </li>
               ))}
@@ -122,7 +128,7 @@ function Field({ label, children, className, hint }: { label: string; children: 
     <label className={cx('block', className)}>
       <span className="mb-2 block text-sm font-medium text-ink-200">{label}</span>
       {children}
-      {hint && <span className="mt-1.5 block text-xs text-ink-500">{hint}</span>}
+      {hint && <span className="mt-1.5 block text-xs text-ink-400">{hint}</span>}
     </label>
   );
 }

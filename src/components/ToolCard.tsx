@@ -69,7 +69,7 @@ export function ToolCard({ tool, layout = 'grid' }: { tool: Tool; layout?: 'grid
         </div>
         <div className="flex items-center gap-2">
           <PriceTag pricing={tool.pricing} />
-          <ArrowUpRight className="h-4 w-4 text-ink-500 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-zap" />
+          <ArrowUpRight className="h-4 w-4 text-ink-400 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-zap" />
         </div>
       </div>
       </div>

@@ -21,9 +21,18 @@
 
 Global **⌘K / Ctrl+K** (or `/`) opens a command palette that searches tools, prompts and categories.
 
+## SEO & analytics
+
+- Every route is **prerendered to static HTML** at build time (`scripts/prerender.mjs`) with its own title, description, canonical URL and JSON-LD, then hydrated in the browser. Unknown URLs get a real 404 page.
+- Per-page metadata lives in `src/seo/meta.ts`; `sitemap.xml` is generated from the same route list on every build.
+- `public/robots.txt` allows search and AI crawlers; `public/llms.txt` summarises the site for AI assistants.
+- Google / Bing verification tags and Microsoft Clarity are switched on by environment variables — see `.env.example`.
+- Vercel Analytics and Speed Insights (Core Web Vitals) are installed.
+- Post-launch checklist: [`docs/LAUNCH_SEO_CHECKLIST.md`](docs/LAUNCH_SEO_CHECKLIST.md).
+
 ## Stack
 
-React 18 + TypeScript · Vite · Tailwind CSS · React Router · lucide-react · Vercel Analytics
+React 18 + TypeScript · Vite (with build-time prerendering) · Tailwind CSS · React Router · lucide-react · Vercel Analytics & Speed Insights
 
 ## Design system
 
@@ -38,7 +47,10 @@ src/
   components/   Navbar, Footer, CommandPalette, ToolCard, PromptCard, badges, section headers
   pages/        One file per route
   data/         Mock tools, prompts, categories, articles (replace with API later)
-  lib/ui.ts     Shared helpers + palette context
+  lib/          Shared helpers, palette context, hydration-safe search params
+  seo/          Per-page metadata, head tags, <Seo> sync component
+  entry-server.tsx   Server render entry used by the prerender step
+scripts/prerender.mjs   Writes static HTML for every route + sitemap.xml
 ```
 
 ## Develop
@@ -49,4 +61,4 @@ npm run dev
 npm run build
 ```
 
-`vercel.json` rewrites all routes to `index.html` so client-side routes work on refresh.
+`npm run build` builds the client, builds a server bundle, then prerenders every route into `dist/` (e.g. `dist/tools/querysmith-ai.html`). `vercel.json` turns on clean URLs so `/tools` serves `tools.html`.

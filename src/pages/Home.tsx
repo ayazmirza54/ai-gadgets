@@ -94,7 +94,7 @@ function Hero() {
                 {tab === 'Prompts' && 'Try “cold email for SaaS founders”'}
                 {tab === 'Agents' && 'Try “an agent that triages my inbox”'}
               </span>
-              <kbd className="hidden rounded-md border border-ink-600 px-1.5 py-0.5 font-mono text-[10px] text-ink-400 sm:block">⌘K</kbd>
+              <kbd className="hidden rounded-md border border-ink-600 px-1.5 py-0.5 font-mono text-xs text-ink-400 sm:block">⌘K</kbd>
               <span className="btn-zap rounded-xl px-5 py-2.5">Search</span>
             </button>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-2 text-xs">
@@ -119,14 +119,14 @@ function Hero() {
                 {featured.map((t, i) => (
                   <li key={t.slug}>
                     <Link to={`/tools/${t.slug}`} className="group flex items-center gap-4 py-3.5">
-                      <span className="w-5 font-mono text-xs text-ink-500">0{i + 1}</span>
+                      <span className="w-5 font-mono text-xs text-ink-400">0{i + 1}</span>
                       <ToolIcon tool={t} size="sm" />
                       <span className="min-w-0 flex-1">
                         <span className="block truncate font-medium text-ink-100 group-hover:text-white">{t.name}</span>
                         <span className="block truncate text-xs text-ink-400">{t.tagline}</span>
                       </span>
                       <Rating value={t.rating} className="hidden sm:inline-flex" />
-                      <span className="hidden rounded-full border border-ink-700 px-2.5 py-1 text-[11px] text-ink-300 transition group-hover:border-zap/50 group-hover:text-zap sm:inline">Open</span>
+                      <span className="hidden rounded-full border border-ink-700 px-2.5 py-1 text-xs text-ink-300 transition group-hover:border-zap/50 group-hover:text-zap sm:inline">Open</span>
                     </Link>
                   </li>
                 ))}
@@ -135,10 +135,10 @@ function Hero() {
             <div className="card relative min-w-0 overflow-hidden bg-ink-950/60 p-5">
               <div className="flex items-center justify-between">
                 <p className="eyebrow"><MessageSquareText className="h-3 w-3 text-zap" /> Prompt of the day</p>
-                <span className="rounded-md border border-ink-700 px-1.5 py-0.5 font-mono text-[10px] text-ink-400">{prompts[0].model}</span>
+                <span className="rounded-md border border-ink-700 px-1.5 py-0.5 font-mono text-xs text-ink-400">{prompts[0].model}</span>
               </div>
               <p className="mt-4 font-display text-lg font-semibold leading-snug">{prompts[0].title}</p>
-              <div className="mt-3 h-32 overflow-hidden rounded-xl border border-ink-700 bg-ink-900 p-3 font-mono text-[11px] leading-relaxed text-ink-300">
+              <div className="mt-3 h-32 overflow-hidden rounded-xl border border-ink-700 bg-ink-900 p-3 font-mono text-xs leading-relaxed text-ink-300">
                 <PromptBody text={prompts[0].body} className="whitespace-pre-line" />
               </div>
               <div className="mt-4 flex items-center justify-between">
@@ -205,14 +205,14 @@ function Pillars() {
             {tools.slice(0, 8).map((t) => (
               <span key={t.slug} className="rounded-xl ring-4 ring-ink-900 transition group-hover:translate-y-[-2px]"><ToolIcon tool={t} size="sm" /></span>
             ))}
-            <span className="grid h-9 w-9 place-items-center rounded-[10px] bg-ink-800 text-[10px] font-semibold text-ink-300 ring-4 ring-ink-900">+2k</span>
+            <span className="grid h-9 w-9 place-items-center rounded-[10px] bg-ink-800 text-xs font-semibold text-ink-300 ring-4 ring-ink-900">+2k</span>
           </div>
         </Link>
         <Link to="/prompts" className="card card-hover group relative overflow-hidden p-7 md:col-span-2">
           <MessageSquareText className="h-7 w-7 text-volt" />
           <h3 className="h-display mt-6 text-3xl">Prompt Hub</h3>
           <p className="mt-2 text-ink-400">Copy, remix or sell prompts for every model.</p>
-          <div className="mt-6 rounded-xl border border-ink-700 bg-ink-950 p-3 font-mono text-[11px] text-ink-300">
+          <div className="mt-6 rounded-xl border border-ink-700 bg-ink-950 p-3 font-mono text-xs text-ink-300">
             Write a cold email to <span className="rounded bg-zap/10 px-1 text-zap">prospect</span> at <span className="rounded bg-zap/10 px-1 text-zap">company</span>…
           </div>
         </Link>
@@ -227,7 +227,7 @@ function Pillars() {
           <p className="mt-2 text-sm text-ink-400">Guides, build logs and the AI news that actually matters.</p>
         </Link>
         <div className="card relative overflow-hidden p-7 md:col-span-2">
-          <span className="absolute right-5 top-5 rounded-full border border-ink-600 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-ink-300">Soon</span>
+          <span className="absolute right-5 top-5 rounded-full border border-ink-600 px-2 py-0.5 text-xs font-semibold uppercase tracking-wider text-ink-300">Soon</span>
           <FlaskConical className="h-7 w-7 text-zap" />
           <h3 className="h-display mt-6 text-2xl">Playground</h3>
           <p className="mt-2 text-sm text-ink-400">Run any prompt across models side by side. One key, every model.</p>
@@ -318,7 +318,7 @@ function CreatorCTA() {
         <div aria-hidden className="absolute inset-0 opacity-[.15] [background-image:radial-gradient(#08080A_1px,transparent_1px)] [background-size:18px_18px]" />
         <div className="relative grid items-center gap-12 lg:grid-cols-2">
           <div>
-            <p className="font-mono text-[11px] font-semibold uppercase tracking-[.18em]">For creators & builders</p>
+            <p className="font-mono text-xs font-semibold uppercase tracking-[.18em]">For creators & builders</p>
             <h2 className="h-display mt-4 text-5xl sm:text-6xl">Built an AI thing? Get paid for it.</h2>
             <p className="mt-5 max-w-md text-lg text-ink-800">
               List your tool, sell your prompts, or publish agents. Reach 180k makers a month and keep 85% of every sale.
@@ -375,7 +375,7 @@ function LearnStrip() {
                 <h3 className="mt-2 line-clamp-2 font-display text-lg font-semibold leading-snug tracking-tight">{a.title}</h3>
                 <p className="mt-1 text-xs text-ink-400">{a.date}</p>
               </div>
-              <ArrowUpRight className="ml-auto h-4 w-4 shrink-0 text-ink-500 transition group-hover:text-zap" />
+              <ArrowUpRight className="ml-auto h-4 w-4 shrink-0 text-ink-400 transition group-hover:text-zap" />
             </a>
           ))}
         </div>

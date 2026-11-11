@@ -24,11 +24,11 @@ export default function Pricing() {
   const [yearly, setYearly] = useState(true);
   return (
     <>
-      <PageHero eyebrow="Pricing" title={<>Simple pricing. <span className="text-ink-500">Serious value.</span></>} subtitle="Start free. Upgrade when Zapp starts saving you hours — which, honestly, is usually week one.">
+      <PageHero eyebrow="Pricing" title={<>Simple pricing. <span className="text-ink-400">Serious value.</span></>} subtitle="Start free. Upgrade when Zapp starts saving you hours — which, honestly, is usually week one.">
         <div className="mt-8 inline-flex items-center rounded-full border border-ink-700 bg-ink-900 p-1 text-sm">
           <button onClick={() => setYearly(false)} className={cx('rounded-full px-4 py-1.5', !yearly ? 'bg-white text-ink-950' : 'text-ink-300')}>Monthly</button>
           <button onClick={() => setYearly(true)} className={cx('inline-flex items-center gap-2 rounded-full px-4 py-1.5', yearly ? 'bg-white text-ink-950' : 'text-ink-300')}>
-            Yearly <span className="rounded-full bg-zap px-1.5 text-[10px] font-semibold text-ink-950">-17%</span>
+            Yearly <span className="rounded-full bg-zap px-1.5 text-xs font-semibold text-ink-950">-17%</span>
           </button>
         </div>
       </PageHero>
@@ -36,14 +36,14 @@ export default function Pricing() {
       <div className="container-z mt-12 grid gap-4 lg:grid-cols-3">
         {plans.map((p) => (
           <div key={p.n} className={cx('relative flex flex-col rounded-3xl p-8', p.hot ? 'bg-zap text-ink-950' : 'card')}>
-            {p.hot && <span className="absolute right-6 top-6 inline-flex items-center gap-1 rounded-full bg-ink-950 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-zap"><Zap className="h-3 w-3 fill-zap" /> Most popular</span>}
+            {p.hot && <span className="absolute right-6 top-6 inline-flex items-center gap-1 rounded-full bg-ink-950 px-2.5 py-1 text-xs font-semibold uppercase tracking-wider text-zap"><Zap className="h-3 w-3 fill-zap" /> Most popular</span>}
             <p className={cx('font-display text-2xl font-semibold')}>{p.n}</p>
             <p className={cx('mt-1 text-sm', p.hot ? 'text-ink-800' : 'text-ink-400')}>{p.d}</p>
             <p className="mt-8 flex items-baseline gap-1">
               <span className="h-display text-6xl">₹{yearly ? p.y : p.m}</span>
               <span className={cx('text-sm', p.hot ? 'text-ink-800' : 'text-ink-400')}>/ month</span>
             </p>
-            <p className={cx('mt-1 h-4 text-xs', p.hot ? 'text-ink-800' : 'text-ink-500')}>{p.m > 0 && yearly ? `Billed ₹${p.y * 12} yearly` : ''}</p>
+            <p className={cx('mt-1 h-4 text-xs', p.hot ? 'text-ink-800' : 'text-ink-400')}>{p.m > 0 && yearly ? `Billed ₹${p.y * 12} yearly` : ''}</p>
             <Link to="/signin" className={cx('btn btn-lg mt-8', p.hot ? 'bg-ink-950 text-white hover:bg-ink-800' : 'btn-outline')}>{p.cta}</Link>
             <ul className="mt-8 space-y-3 text-sm">
               {p.f.map((f) => (

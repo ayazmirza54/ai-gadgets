@@ -17,7 +17,7 @@ export function Verified() {
 
 export function NewBadge() {
   return (
-    <span className="inline-flex items-center gap-1 rounded-full bg-aqua/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-aqua">
+    <span className="inline-flex items-center gap-1 rounded-full bg-aqua/10 px-2 py-0.5 text-xs font-semibold uppercase tracking-wider text-aqua">
       <Sparkles className="h-3 w-3" /> New
     </span>
   );
@@ -25,7 +25,7 @@ export function NewBadge() {
 
 export function HotBadge() {
   return (
-    <span className="inline-flex items-center gap-1 rounded-full bg-ember/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-ember">
+    <span className="inline-flex items-center gap-1 rounded-full bg-ember/10 px-2 py-0.5 text-xs font-semibold uppercase tracking-wider text-ember">
       <Flame className="h-3 w-3" /> Hot
     </span>
   );
@@ -37,10 +37,10 @@ export function PriceTag({ pricing }: { pricing: 'Free' | 'Freemium' | 'Paid' })
     Freemium: 'text-aqua bg-aqua/10',
     Paid: 'text-ink-200 bg-white/5',
   }[pricing];
-  return <span className={cx('rounded-full px-2 py-0.5 text-[11px] font-medium', style)}>{pricing}</span>;
+  return <span className={cx('rounded-full px-2 py-0.5 text-xs font-medium', style)}>{pricing}</span>;
 }
 
-export function Avatar({ name, hue, size = 'h-6 w-6 text-[10px]' }: { name: string; hue: string; size?: string }) {
+export function Avatar({ name, hue, size = 'h-6 w-6 text-xs' }: { name: string; hue: string; size?: string }) {
   const initials = name.replace('Dr. ', '').split(' ').map((s) => s[0]).slice(0, 2).join('');
   return <span className={cx('grid shrink-0 place-items-center rounded-full font-semibold text-ink-950', hue, size)}>{initials}</span>;
 }

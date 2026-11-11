@@ -28,7 +28,7 @@ export function Footer() {
         </div>
         {cols.map((c) => (
           <div key={c.title}>
-            <h4 className="eyebrow mb-4">{c.title}</h4>
+            <h2 className="eyebrow mb-4">{c.title}</h2>
             <ul className="space-y-2.5">
               {c.links.map(([label, to]) => (
                 <li key={label}>
@@ -48,7 +48,8 @@ export function Footer() {
       </div>
 
       <div aria-hidden className="pointer-events-none select-none overflow-hidden">
-        <p className="h-display -mb-[0.18em] text-center text-[26vw] leading-none text-white/[.025]">zapp</p>
+        {/* Decorative wordmark drawn with CSS content so it isn't read as low-contrast text. */}
+        <div className="h-display -mb-[0.18em] text-center text-[26vw] leading-none text-white/[.025] before:content-['zapp']" />
       </div>
     </footer>
   );

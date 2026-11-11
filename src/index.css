@@ -27,7 +27,7 @@
   .chip { @apply inline-flex items-center gap-1.5 rounded-full border border-ink-700 bg-ink-900 px-3 py-1 text-xs font-medium text-ink-300 transition-colors; }
   .chip-active { @apply border-zap/50 bg-zap/10 text-zap; }
 
-  .eyebrow { @apply inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[.18em] text-ink-400; }
+  .eyebrow { @apply inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[.16em] text-ink-400; }
 
   .input { @apply w-full rounded-xl border border-ink-700 bg-ink-900 px-4 py-2.5 text-sm text-ink-100 placeholder:text-ink-400 transition-colors focus:border-zap/60 focus:outline-none focus:ring-4 focus:ring-zap/10; }
 

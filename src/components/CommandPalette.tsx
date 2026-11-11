@@ -79,7 +79,7 @@ export function CommandPalette({ open, onClose }: { open: boolean; onClose: () =
             placeholder="Search tools, prompts, categories…"
             className="h-14 flex-1 bg-transparent text-[15px] text-white placeholder:text-ink-400 focus:outline-none"
           />
-          <kbd className="rounded-md border border-ink-600 px-1.5 py-0.5 font-mono text-[10px] text-ink-400">ESC</kbd>
+          <kbd className="rounded-md border border-ink-600 px-1.5 py-0.5 font-mono text-xs text-ink-400">ESC</kbd>
         </div>
 
         <div className="max-h-[55vh] overflow-y-auto p-2">
@@ -93,7 +93,7 @@ export function CommandPalette({ open, onClose }: { open: boolean; onClose: () =
             lastGroup = it.group;
             return (
               <div key={it.id}>
-                {header && <p className="px-3 pb-1.5 pt-3 font-mono text-[10px] uppercase tracking-[.16em] text-ink-500">{header}</p>}
+                {header && <p className="px-3 pb-1.5 pt-3 font-mono text-xs uppercase tracking-[.16em] text-ink-400">{header}</p>}
                 <button
                   onMouseEnter={() => setActive(i)}
                   onClick={() => go(it.to)}
@@ -111,7 +111,7 @@ export function CommandPalette({ open, onClose }: { open: boolean; onClose: () =
           })}
         </div>
 
-        <div className="flex items-center gap-4 border-t border-ink-700 px-4 py-2.5 text-[11px] text-ink-400">
+        <div className="flex items-center gap-4 border-t border-ink-700 px-4 py-2.5 text-xs text-ink-400">
           <span className="inline-flex items-center gap-1"><Wrench className="h-3 w-3" /> {tools.length} tools</span>
           <span className="inline-flex items-center gap-1"><MessageSquareText className="h-3 w-3" /> {prompts.length} prompts</span>
           <span className="inline-flex items-center gap-1"><LayoutGrid className="h-3 w-3" /> {categories.length} categories</span>
